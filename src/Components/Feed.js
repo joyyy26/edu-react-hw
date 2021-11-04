@@ -6,13 +6,14 @@ class Feed extends React.Component {
 
   state = {
     // ADD CODE HERE
+    blocks: [],
     showopt: false
   }
 
   addBlock = (color) => {
     this.setState({
       // ADD CODE HERE
-      color
+      blocks: [<Block blockColor={color}></Block>, ...this.state.blocks]
     })
   }
 
@@ -35,7 +36,7 @@ class Feed extends React.Component {
       <div className='mainfeed'>
         <div className="input">
           {/* ADD CODE HERE */
-            this.props.showopt}
+            this.state.blocks}
         </div>
         <div>
           <button class="button" onClick={this.pickColorlayout}>+ Post Block</button>

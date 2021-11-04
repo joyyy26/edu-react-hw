@@ -11,14 +11,14 @@ class Block extends React.Component {
 
     const mystyle = {
       // ADD CODE HERE (set style)
-      display: 'Flex'      //CSS Syntx
+      backgroundColor: this.props.blockColor
     };
 
     return (
       <>
-        <div class="blockers" style={
+        <div className="blockers" style={
           // ADD CODE HERE
-          this.props.mystyle     //Attribute is the prop we want to access
+          mystyle
         }>
         </div>
 
